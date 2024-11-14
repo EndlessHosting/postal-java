@@ -2,6 +2,7 @@
 package ca.mgamble.postal.api.message;
 
 import lombok.Data;
+import lombok.Getter;
 
 /**
  *
@@ -31,6 +32,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
 
+@Getter
 @Data
 public class Header {
     private String key;
@@ -40,4 +42,5 @@ public class Header {
         this.key = key;
         this.value = value;
     }
+
 }

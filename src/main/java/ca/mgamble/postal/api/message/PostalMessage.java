@@ -1,5 +1,7 @@
 package ca.mgamble.postal.api.message;
 
+import ca.mgamble.postal.api.utils.HeaderSerializer;
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import lombok.Data;
 
@@ -43,7 +45,8 @@ public class PostalMessage {
     private List<Attachment> attachments;
     private List<EmbeddedImage> embeddedImages;
 
-    @SerializedName("Headers")
+    @SerializedName("headers")
+    @JsonAdapter(HeaderSerializer.class)
     private List<Header> headers;
 
     private String from;
